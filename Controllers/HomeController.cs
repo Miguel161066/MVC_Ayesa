@@ -41,6 +41,11 @@ public class HomeController : Controller
         return View(list);
     }
 
+    public IActionResult Contact()
+    {
+        return View("Contact");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error(int statusCode)    
     {
@@ -49,4 +54,5 @@ public class HomeController : Controller
         }    
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
 }
